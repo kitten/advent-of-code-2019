@@ -26,7 +26,7 @@ fn main () {
     .lines()
     .filter_map(|x| x.unwrap().parse::<i32>().ok())
     .map(calculate_fuel)
-    .fold(0, |acc, x| acc + x);
+    .sum::<i32>();
 
   println!("Total fuel consumption: {}", fuel);
 }
